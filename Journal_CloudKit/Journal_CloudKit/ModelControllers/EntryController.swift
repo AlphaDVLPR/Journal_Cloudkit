@@ -15,7 +15,55 @@ class EntryController {
     static let shared = EntryController()
     var entries: [Entry] = []
     let publicCloudkitDatabase = CKContainer.default().publicCloudDatabase
+    let privateCloudKitDatabase = CKContainer.default().privateCloudDatabase
     
-    //CRUD
+    //MARK: - Create
+
+    //Save------
+    func saveEntry(with title:String, bodyText: String, completion: @escaping (_ success: Bool) -> Void) {
+        
+        //Nested
+        let newEntry = Entry(title: title, bodyText: bodyText)
+        let entryRecord = CKRecord(entry: newEntry)
+        
+        privateCloudKitDatabase.save(entryRecord) { (record, error) in
+            //Handle the error
+            if let error = error {
+                print("There was an error saving the entry \(error)")
+                completion(false)
+                return
+            }
+            
+            guard let record = record,
+                let savedEntry = Entry(ckRecord: record) else {completion(false); return}
+            
+            self.entries.append(savedEntry)
+            print("Save of entry was successful")
+            completion(true)
+        }
+    }
     
+    //Fetch------
+    func fetchEntry(completion: @escaping (_ success: Bool) -> Void) {
+        
+        let predicate = NSPredicate(value: true)
+        let entryQuery = CKQuery(recordType: EntryCodingKeys.kEntryType, predicate: predicate)
+        
+        privateCloudKitDatabase.perform(entryQuery, inZoneWith: nil) { (foundRecord, error) in
+            
+            //handle the error
+            if let error = error {
+                print("There was an error performing the fetch for Entry \(error)")
+                completion(false)
+                return
+            }
+            
+            guard let record = foundRecord else {completion(false); return}
+            let entry = record.compactMap( {Entry(ckRecord: $0)})
+            
+            self.entries = entry
+            print("Fetch entry success")
+            completion(true)
+        }
+    }
 }

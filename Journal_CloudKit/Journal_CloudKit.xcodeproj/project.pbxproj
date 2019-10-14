@@ -13,6 +13,8 @@
 		E8BE05F623550B0700BC4D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BE05F523550B0700BC4D24 /* Assets.xcassets */; };
 		E8BE05F923550B0700BC4D24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BE05F723550B0700BC4D24 /* LaunchScreen.storyboard */; };
 		E8BE060E23550BDE00BC4D24 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BE060D23550BDE00BC4D24 /* CloudKit.framework */; };
+		E8BE061023550CA600BC4D24 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE060F23550CA600BC4D24 /* Entry.swift */; };
+		E8BE06122355100200BC4D24 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE06112355100200BC4D24 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		E8BE05FA23550B0700BC4D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8BE060B23550BD900BC4D24 /* Journal_CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Journal_CloudKit.entitlements; sourceTree = "<group>"; };
 		E8BE060D23550BDE00BC4D24 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E8BE060F23550CA600BC4D24 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		E8BE06112355100200BC4D24 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		E8BE060223550B7500BC4D24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8BE060F23550CA600BC4D24 /* Entry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 		E8BE060323550B7B00BC4D24 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8BE06112355100200BC4D24 /* EntryController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -237,7 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BE061023550CA600BC4D24 /* Entry.swift in Sources */,
 				E8BE05ED23550B0600BC4D24 /* AppDelegate.swift in Sources */,
+				E8BE06122355100200BC4D24 /* EntryController.swift in Sources */,
 				E8BE05EF23550B0600BC4D24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

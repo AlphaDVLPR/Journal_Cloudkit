@@ -20,9 +20,9 @@ struct EntryCodingKeys {
 //Entry Class
 class Entry {
     
-    let title: String
-    let bodyText: String
-    let timestamp: Date
+    var title: String
+    var bodyText: String
+    var timestamp: Date
     
     init(title: String, bodyText: String, timestamp: Date = Date()) {
         

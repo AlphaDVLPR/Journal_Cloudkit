@@ -20,7 +20,7 @@ class EntryController {
     //MARK: - Create
 
     //Save------
-    func saveEntry(with title:String, bodyText: String, completion: @escaping (_ success: Bool) -> Void) {
+    func saveEntry(title:String, bodyText: String, completion: @escaping (_ success: Bool) -> Void) {
         
         //Nested
         let newEntry = Entry(title: title, bodyText: bodyText)
@@ -41,6 +41,14 @@ class EntryController {
             print("Save of entry was successful")
             completion(true)
         }
+    }
+    
+    //Update------
+    func updateEntry(entry: Entry, title: String, bodyText: String, completion: @escaping (_ success: Bool) -> Void) {
+        entry.title = title
+        entry.bodyText = bodyText
+        
+        //Input mikes code
     }
     
     //Fetch------

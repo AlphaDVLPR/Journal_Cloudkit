@@ -15,6 +15,9 @@
 		E8BE060E23550BDE00BC4D24 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BE060D23550BDE00BC4D24 /* CloudKit.framework */; };
 		E8BE061023550CA600BC4D24 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE060F23550CA600BC4D24 /* Entry.swift */; };
 		E8BE06122355100200BC4D24 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE06112355100200BC4D24 /* EntryController.swift */; };
+		E8BE061423551C2100BC4D24 /* DetailEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE061323551C2100BC4D24 /* DetailEntryViewController.swift */; };
+		E8BE061623551C3100BC4D24 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE061523551C3100BC4D24 /* EntryListTableViewController.swift */; };
+		E8BE061823551D9400BC4D24 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE061723551D9400BC4D24 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		E8BE060D23550BDE00BC4D24 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E8BE060F23550CA600BC4D24 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E8BE06112355100200BC4D24 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		E8BE061323551C2100BC4D24 /* DetailEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntryViewController.swift; sourceTree = "<group>"; };
+		E8BE061523551C3100BC4D24 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		E8BE061723551D9400BC4D24 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 		E8BE060123550B5100BC4D24 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E8BE061723551D9400BC4D24 /* DateHelper.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 		E8BE060923550B9600BC4D24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8BE061323551C2100BC4D24 /* DetailEntryViewController.swift */,
+				E8BE061523551C3100BC4D24 /* EntryListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,9 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BE061423551C2100BC4D24 /* DetailEntryViewController.swift in Sources */,
 				E8BE061023550CA600BC4D24 /* Entry.swift in Sources */,
+				E8BE061623551C3100BC4D24 /* EntryListTableViewController.swift in Sources */,
 				E8BE05ED23550B0600BC4D24 /* AppDelegate.swift in Sources */,
 				E8BE06122355100200BC4D24 /* EntryController.swift in Sources */,
+				E8BE061823551D9400BC4D24 /* DateHelper.swift in Sources */,
 				E8BE05EF23550B0600BC4D24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
